@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cnbfragment.ImpianFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/list_impian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_format_list_bulleted_black_24dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_impian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        android:minHeight="?actionBarSize"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="2dp"
+        app:tabGravity="fill"
+        android:layout_below="@+id/list_impian">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_impian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_impian"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddImpian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"/>
+</RelativeLayout>

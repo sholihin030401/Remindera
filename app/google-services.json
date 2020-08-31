@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "325183333636",
+    "firebase_url": "https://reminder-7336a.firebaseio.com",
+    "project_id": "reminder-7336a",
+    "storage_bucket": "reminder-7336a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325183333636:android:d99bbf78e7e7fc78461c51",
+        "android_client_info": {
+          "package_name": "com.project.gemastik.reminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325183333636-amotk1j95hq7bt0pua3g960nmq6e4knb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5547pCY6YrmYmne3WT222vgC9GjSW2u8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325183333636-amotk1j95hq7bt0pua3g960nmq6e4knb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

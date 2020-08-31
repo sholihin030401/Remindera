@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Reminder</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="impianku">Impianku</string>
+    <string name="artikel">Artikel</string>
+    <string name="profil">Profil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="impian">Impian</string>
+    <string name="buat_akun_baru">Buat Akun Baru</string>
+    <string name="login">Login</string>
+    <string name="lupa_password">Lupa Password</string>
+    <string name="password">Password</string>
+    <string name="username_atau_email">Username atau Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="masuk">Masuk</string>
+    <string name="masuk_dengan_google">Masuk Dengan Google</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="informasi_lainnya">Informasi Lainnya</string>
+    <string name="ketentuan_layanan">Ketentuan Layanan</string>
+    <string name="kebijakan_privasi">Kebijakan Privasi</string>
+    <string name="beri_kami_nilai">Beri kami nilai</string>
+    <string name="logout">Logout</string>
+    <string name="search">Search</string>
+    <string name="motivasi">Motivasi</string>
+    <string name="selamat_datang_users">Selamat Pagi,\nUsers</string>
+    <string name="judul">Judul</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="waktu">Waktu</string>
+    <string name="tipe_pengingat">Tipe Pengingat</string>
+    <string name="alarm">Alarm</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="simpan">Simpan</string>
+    <string name="ulangi_pengingat">Ulangi Pengingat</string>
+    <string name="nama">Nama</string>
+    <string name="waktu_mulai">Waktu Mulai</string>
+    <string name="waktu_selesai">Waktu Selesai</string>
+    <string name="selesai_agenda">Selesai Agenda</string>
+    <string name="mulai_agenda">Mulai Agenda</string>
+    <string name="seharian">Seharian</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="ingatkan_saya_3_hari_sebelumnya">Ingatkan 3 hari sebelumnya</string>
+    <string name="nama_peringatan">Nama Peringatan</string>
+    <string name="waktu_peringatan">Waktu Peringatan</string>
+    <string name="nama_impian">Nama Impian</string>
+    <string name="deskripsi_opsional">Deskripsi (Opsional)</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="tambahkan_foto">Tambahkan Foto</string>
+
+    <string-array name="kat_artikel">
+        <item>Motivasi Belajar</item>
+        <item>Pengembangan Diri</item>
+    </string-array>
+
+    <string-array name="kat_pengingat">
+        <item>Satu Kali</item>
+        <item>Setiap Hari</item>
+        <item>Setiap Pekan</item>
+        <item>Setiap Bulan</item>
+    </string-array>
+</resources>

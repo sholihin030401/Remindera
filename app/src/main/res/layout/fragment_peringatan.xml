@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".jadwal.PeringatanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingatkan_saya_3_hari_sebelumnya"
+        android:textSize="17sp"
+        android:switchPadding="5dp"
+        android:fontFamily="@font/poppins_regular"
+        style="@style/MarginFormEdittext"/>
+
+    <EditText
+        android:id="@+id/nama_peringatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nama_peringatan"
+        android:inputType="text"
+        android:background="@drawable/rectangle_edittext"
+        android:padding="8dp"
+        android:cursorVisible="false"
+        style="@style/MarginFormEdittext"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <EditText
+        android:id="@+id/tgl_lahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/waktu_peringatan"
+        android:inputType="textMultiLine"
+        android:drawableStart="@drawable/ic_today"
+        android:drawablePadding="5dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:background="@drawable/rectangle_edittext"
+        android:padding="8dp"
+        android:cursorVisible="false"
+        style="@style/MarginFormEdittext"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipe_pengingat"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_regular"
+        style="@style/MarginFormEdittext"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp">
+        <RadioButton
+            android:id="@+id/alarm_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm"
+            android:textSize="17sp"
+            android:checked="true"
+            android:fontFamily="@font/poppins_regular" />
+        <RadioButton
+            android:id="@+id/notif_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifikasi"
+            android:layout_marginStart="20dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_regular" />
+    </RadioGroup>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnsimpan_ultah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginFormEdittext"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/simpan"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_medium"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

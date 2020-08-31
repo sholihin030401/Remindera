@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cnbfragment.JadwalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quotes_card"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        style="@style/MarginFormEdittext"
+        app:cardCornerRadius="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selamat_datang_users"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quotes_card"/>
+
+
+    <FrameLayout
+        android:id="@+id/jadwal_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/datePicker">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+            </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddJadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:fabSize="normal"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"/>
+    </FrameLayout>
+</RelativeLayout>
