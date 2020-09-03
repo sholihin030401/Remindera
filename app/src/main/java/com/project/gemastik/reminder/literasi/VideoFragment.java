@@ -1,4 +1,4 @@
-package com.project.gemastik.reminder.motivasi;
+package com.project.gemastik.reminder.literasi;
 
 import android.os.Bundle;
 

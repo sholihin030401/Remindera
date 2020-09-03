@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 import com.project.gemastik.reminder.R;
-import com.project.gemastik.reminder.motivasi.ArtikelFragment;
-import com.project.gemastik.reminder.motivasi.VideoFragment;
-import com.project.gemastik.reminder.motivasi.ViewPagerArtikel;
+import com.project.gemastik.reminder.literasi.ArtikelFragment;
+import com.project.gemastik.reminder.literasi.VideoFragment;
+import com.project.gemastik.reminder.literasi.ViewPagerArtikel;
 
 /**
  * A simple {@link Fragment} subclass.

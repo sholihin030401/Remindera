@@ -26,7 +26,7 @@
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"
         android:layout_above="@id/pwlogin"/>
-    <EditText
+    <com.subhrajyoti.passwordview.PasswordView
         android:id="@+id/pwlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +34,7 @@
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
         android:cursorVisible="true"
+        app:eyeTint="@color/colorPrimary"
         android:inputType="textPassword"
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"

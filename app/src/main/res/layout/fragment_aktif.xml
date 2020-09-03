@@ -11,7 +11,7 @@
         android:id="@+id/rv_impian_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/add_item_sort_impian">
+        tools:listitem="@layout/add_impian_item">
 
     </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

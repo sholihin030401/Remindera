@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".motivasi.ArtikelDetailActivity"></activity>
+        <activity android:name=".literasi.ArtikelDetailActivity"></activity>
         <activity android:name=".impian.AddImpianActivity" />
         <activity android:name=".jadwal.AddJadwalActivity" />
         <activity android:name=".verify.SignUpActivity" />

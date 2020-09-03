@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".motivasi.ArtikelFragment">
+    tools:context=".literasi.ArtikelFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
@@ -26,4 +26,19 @@
         android:layout_height="wrap_content"
         style="@style/MarginFormEdittext"
         android:entries="@array/kat_artikel"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e_book_gratis"
+        style="@style/MarginForm"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_artikel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginForm"/>
 </LinearLayout>

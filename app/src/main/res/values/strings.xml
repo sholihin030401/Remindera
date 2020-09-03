@@ -58,7 +58,6 @@
     <string name="jumlah_halaman_24">Jumlah Halaman :</string>
     <string name="_24_halaman">24 Halaman</string>
     <string name="kategori">Kategori :</string>
-    <string name="simpan">Simpan</string>
     <string name="suka">Suka</string>
     <string name="unduh">Unduh</string>
     <string name="bagikan">Bagikan</string>
@@ -67,6 +66,10 @@
     <string name="bagaimana_cara_mendesain_suatu_impian">Bagaimana cara mendesain suatu impian?</string>
     <string name="aktif">Aktif</string>
     <string name="tercapai">Tercapai</string>
+    <string name="target_pencapaian">Target Pencapaian</string>
+    <string name="e_book_gratis">E-Book Gratis</string>
+    <string name="kebiasaan_impian">Hal yang harus dilakukan sehari-hari</string>
+    <string name="tambah">Tambah</string>
 
     <string-array name="kat_artikel">
         <item>Keagamaan</item>

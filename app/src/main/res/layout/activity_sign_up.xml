@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,25 +7,31 @@
     android:background="#00CCB0"
     tools:context=".verify.SignUpActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
+        android:id="@+id/logo_app"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:src="@drawable/logo_app"/>
+        android:src="@drawable/logo_app"
+        android:layout_alignParentTop="true"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="565dp"
         android:background="@drawable/rectangle"
-        android:layout_alignParentBottom="true"/>
+        android:layout_below="@id/logo_app"/>
 
     <TextView
+        android:id="@+id/txbuatakun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buat_akun_baru"
         android:layout_centerHorizontal="true"
         android:textColor="#00CCB0"
         android:fontFamily="@font/poppins_semibold"
-        android:layout_marginBottom="28dp"
-        android:layout_above="@id/usersign"
+        android:layout_below="@id/logo_app"
+        android:layout_marginTop="20dp"
         android:textSize="22sp"/>
 
     <EditText
@@ -39,7 +45,7 @@
         android:inputType="textPersonName"
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"
-        android:layout_above="@id/mailsign"/>
+        android:layout_below="@id/txbuatakun"/>
     <EditText
         android:id="@+id/mailsign"
         android:layout_width="match_parent"
@@ -50,29 +56,31 @@
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
         android:layout_margin="12dp"
-        android:layout_above="@id/pwsign"/>
-    <EditText
+        android:layout_below="@id/usersign"/>
+    <com.subhrajyoti.passwordview.PasswordView
         android:id="@+id/pwsign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:inputType="textPassword"
+        app:eyeTint="@color/colorPrimary"
         android:fontFamily="@font/poppins_regular"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
         android:layout_margin="12dp"
-        android:layout_above="@id/cpwsign"/>
-    <EditText
+        android:layout_below="@id/mailsign"/>
+    <com.subhrajyoti.passwordview.PasswordView
         android:id="@+id/cpwsign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/konfirmasi_password"
         android:inputType="textPassword"
+        app:eyeTint="@color/colorPrimary"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"
-        android:layout_above="@id/btnsignup"/>
+        android:layout_below="@id/pwsign"/>
 
     <com.dx.dxloadingbutton.lib.LoadingButton
         android:id="@+id/btnsignup"
@@ -82,7 +90,7 @@
         app:lb_cornerRadius="12dp"
         app:lb_btnColor="@color/colorPrimary"
         app:lb_btnText="@string/sign_in"
-        android:layout_above="@id/btnsignup_google"/>
+        android:layout_below="@id/cpwsign"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btnsignup_google"
@@ -94,7 +102,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:focusable="true"
         android:layout_marginBottom="15dp"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@id/btnsignup">
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,5 +115,5 @@
             android:fontFamily="@font/poppins_medium"/>
     </androidx.cardview.widget.CardView>
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
