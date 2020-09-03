@@ -2,7 +2,6 @@ package com.project.gemastik.reminder.verify;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,7 +40,6 @@ public class SignUpActivity extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signin.startLoading();
                 registUser();
             }
         });
@@ -49,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void registUser(){
         String txuser, txmail, txpass, txcpass;
-        signin.loadingFailed();
+
         txuser = username.getText().toString();
         txmail = email.getText().toString();
         txpass = pw.getText().toString();
@@ -86,7 +84,9 @@ public class SignUpActivity extends AppCompatActivity {
                             signin.loadingSuccessful();
                         } else {
                             Toast.makeText(getApplicationContext(),"Password tidak boleh kosong!",Toast.LENGTH_SHORT).show();
+                            signin.loadingFailed();
                         }
+
                     }
                 });
     }

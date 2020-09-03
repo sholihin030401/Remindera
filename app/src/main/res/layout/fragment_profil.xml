@@ -172,7 +172,7 @@
             android:layout_marginBottom="8dp"
             android:background="#C4C4C4"/>
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnlogin"
+            android:id="@+id/btnlogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="#00CCB0"

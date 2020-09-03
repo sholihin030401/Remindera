@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".motivasi.ArtikelDetailActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="12dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="180dp"
+            android:layout_height="260dp"
+            android:src="@drawable/ali"
+            android:background="#ffffff"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txpengarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pengarang_ichwan_sholihin"
+            android:layout_toEndOf="@id/img_cover"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+         <TextView
+             android:id="@+id/pengarang"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/ichwan_sholihin"
+             android:textSize="17sp"
+             android:textColor="#000000"
+             android:fontFamily="@font/poppins_medium"
+             android:layout_below="@id/txpengarang"
+             android:layout_toEndOf="@id/img_cover"
+             android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txjml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jumlah_halaman_24"
+                android:layout_toEndOf="@id/img_cover"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_below="@id/pengarang"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <TextView
+                android:id="@+id/jumlah_hal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_24_halaman"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/txjml"
+                android:layout_toEndOf="@id/img_cover"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txkat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kategori"
+                android:layout_toEndOf="@id/img_cover"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_below="@id/jumlah_hal"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <TextView
+                android:id="@+id/kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/motivasi_belajar"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/txkat"
+                android:layout_toEndOf="@id/img_cover"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_ebook"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cv_info"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/save_ebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bookmark_unsave"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txsimpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simpan"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toEndOf="@id/save_ebook"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/share_ebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_share_black_24dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@id/txsimpan"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txbagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bagikan"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toEndOf="@id/share_ebook"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/unduh_ebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_file_download_black_24dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txbagi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unduh"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toEndOf="@id/unduh_ebook"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_ebook">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"/>
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

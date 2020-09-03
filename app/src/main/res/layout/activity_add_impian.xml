@@ -8,14 +8,47 @@
     tools:context=".impian.AddImpianActivity">
 
     <EditText
-        android:id="@+id/judul_agenda"
+        android:id="@+id/nama_impian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nama_impian"
         android:inputType="text"
         android:background="@drawable/rectangle_edittext"
         android:padding="8dp"
-        android:cursorVisible="false"
+        android:cursorVisible="true"
+        style="@style/MarginFormEdittext"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <EditText
+        android:id="@+id/target_capai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nama_impian"
+        android:inputType="text"
+        android:padding="8dp"
+        android:cursorVisible="true"
+        style="@style/MarginFormEdittext"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tambahkan_foto"
+        style="@style/MarginFormEdittext"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <EditText
+        android:id="@+id/habits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nama_impian"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:cursorVisible="true"
         style="@style/MarginFormEdittext"
         android:textSize="17sp"
         android:fontFamily="@font/poppins_regular"/>
@@ -30,8 +63,8 @@
         android:fontFamily="@font/poppins_medium"/>
 
     <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_camera_alt_black_24dp"
         android:background="@android:color/transparent"
         android:layout_marginStart="20dp"/>

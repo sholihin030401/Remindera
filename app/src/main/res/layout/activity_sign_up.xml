@@ -9,11 +9,11 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="180dp"
         android:src="@drawable/logo_app"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="565dp"
         android:background="@drawable/rectangle"
         android:layout_alignParentBottom="true"/>
 
@@ -35,9 +35,8 @@
         android:hint="@string/username"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
-        android:cursorVisible="false"
+        android:cursorVisible="true"
         android:inputType="textPersonName"
-        android:textColorHint="#C4C4C4"
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"
         android:layout_above="@id/mailsign"/>
@@ -50,7 +49,6 @@
         android:fontFamily="@font/poppins_regular"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
-        android:textColorHint="#C4C4C4"
         android:layout_margin="12dp"
         android:layout_above="@id/pwsign"/>
     <EditText
@@ -62,7 +60,6 @@
         android:fontFamily="@font/poppins_regular"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
-        android:textColorHint="#C4C4C4"
         android:layout_margin="12dp"
         android:layout_above="@id/cpwsign"/>
     <EditText
@@ -74,7 +71,6 @@
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="#C4C4C4"
         android:layout_margin="12dp"
         android:layout_above="@id/btnsignup"/>
 
@@ -82,10 +78,34 @@
         android:id="@+id/btnsignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         app:lb_cornerRadius="12dp"
-        app:lb_btnRippleColor="@color/colorPrimary"
-        app:lb_btnText="@string/sign_in"/>
+        app:lb_btnColor="@color/colorPrimary"
+        app:lb_btnText="@string/sign_in"
+        android:layout_above="@id/btnsignup_google"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnsignup_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginFormEdittext"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daftar_dengan_google"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_medium"/>
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

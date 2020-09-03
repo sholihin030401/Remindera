@@ -11,7 +11,8 @@
         android:id="@+id/quotes_card"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        style="@style/MarginFormEdittext"
+        android:layout_margin="15dp"
+        app:cardElevation="10dp"
         app:cardCornerRadius="15dp">
 
         <TextView
@@ -24,24 +25,50 @@
             android:fontFamily="@font/poppins_medium"/>
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_datepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:layout_below="@id/quotes_card">
     <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/quotes_card"/>
+        android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
 
 
     <FrameLayout
         android:id="@+id/jadwal_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/datePicker">
+        android:layout_below="@id/cv_datepicker">
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tx_agenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agenda_hari_ini"
+                        android:textSize="17sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_margin="15dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_agenda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tx_agenda"
+                        tools:listitem="@layout/agenda_item"/>
 
                 </RelativeLayout>
             </ScrollView>

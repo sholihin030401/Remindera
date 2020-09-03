@@ -52,8 +52,24 @@
     <string name="deskripsi_opsional">Deskripsi (Opsional)</string>
     <string name="lanjut">Lanjut</string>
     <string name="tambahkan_foto">Tambahkan Foto</string>
+    <string name="ichwan_sholihin">Ichwan Sholihin</string>
+    <string name="motivasi_belajar">Motivasi Belajar</string>
+    <string name="pengarang_ichwan_sholihin">Pengarang :</string>
+    <string name="jumlah_halaman_24">Jumlah Halaman :</string>
+    <string name="_24_halaman">24 Halaman</string>
+    <string name="kategori">Kategori :</string>
+    <string name="simpan">Simpan</string>
+    <string name="suka">Suka</string>
+    <string name="unduh">Unduh</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="agenda_hari_ini">Agenda hari ini</string>
+    <string name="daftar_dengan_google">Daftar Dengan Google</string>
+    <string name="bagaimana_cara_mendesain_suatu_impian">Bagaimana cara mendesain suatu impian?</string>
+    <string name="aktif">Aktif</string>
+    <string name="tercapai">Tercapai</string>
 
     <string-array name="kat_artikel">
+        <item>Keagamaan</item>
         <item>Motivasi Belajar</item>
         <item>Pengembangan Diri</item>
     </string-array>

@@ -21,10 +21,9 @@
         android:hint="@string/username_atau_email"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
-        android:cursorVisible="false"
+        android:cursorVisible="true"
         android:inputType="textEmailAddress"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="#C4C4C4"
         android:layout_margin="12dp"
         android:layout_above="@id/pwlogin"/>
     <EditText
@@ -34,9 +33,9 @@
         android:hint="@string/password"
         android:background="@drawable/rectangle_edittext"
         android:padding="10dp"
+        android:cursorVisible="true"
         android:inputType="textPassword"
         android:fontFamily="@font/poppins_regular"
-        android:textColorHint="#C4C4C4"
         android:layout_margin="12dp"
         android:layout_above="@id/txforgot"/>
     <TextView

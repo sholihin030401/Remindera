@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.project.gemastik.reminder.MainActivity;
 import com.project.gemastik.reminder.R;
 
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser();
             }
         });
-        signin = findViewById(R.id.btnsignup);
+        signin = findViewById(R.id.btnsignin);
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +51,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+        @Override
+        public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+            FirebaseUser mUser = firebaseAuth.getCurrentUser();
+
+            if (mUser != null){
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }
+    };
 
     private void loginUser(){
         String txmail, txpass;
@@ -75,11 +89,16 @@ public class LoginActivity extends AppCompatActivity {
 
                             Intent intens = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intens);
-                            finish();
                         } else {
                             Toast.makeText(getApplicationContext(),"Login gagal, silakan coba lagi",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(authStateListener);
     }
 }

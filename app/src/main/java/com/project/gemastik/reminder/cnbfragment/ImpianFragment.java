@@ -1,16 +1,22 @@
 package com.project.gemastik.reminder.cnbfragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -18,12 +24,15 @@ import com.project.gemastik.reminder.R;
 import com.project.gemastik.reminder.impian.AddImpianActivity;
 import com.project.gemastik.reminder.impian.AktifFragment;
 import com.project.gemastik.reminder.impian.TercapaiFragment;
-import com.project.gemastik.reminder.impian.ViewPagerImpian;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ImpianFragment extends Fragment {
+
+    CardView btn_aktif, btn_capai;
+    ImageView imgAktif, imgCapai;
+    TextView txAktif, txCapai;
 
     public ImpianFragment() {
         // Required empty public constructor
@@ -36,31 +45,56 @@ public class ImpianFragment extends Fragment {
         // Inflate the layout for this fragment
         View viewFrag = inflater.inflate(R.layout.fragment_impian, container, false);
 
-        return viewFrag;
-    }
+        fragAktif();
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        ViewPager viewPager = view.findViewById(R.id.viewpager_impian);
-        TabLayout tabLayout = view.findViewById(R.id.tab_impian);
-        FloatingActionButton fab = view.findViewById(R.id.fabAddImpian);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = viewFrag.findViewById(R.id.fabAddImpian);
+        btn_aktif = viewFrag.findViewById(R.id.active_goals);
+        btn_aktif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intents = new Intent(getActivity(), AddImpianActivity.class);
-               startActivity(intents);
+                fragAktif();
             }
         });
 
-        tabLayout.setupWithViewPager(viewPager);
-
-        ViewPagerImpian adapter = new ViewPagerImpian(getChildFragmentManager());
-
-        adapter.addFrag(new AktifFragment(),"Aktif");
-        adapter.addFrag(new TercapaiFragment(),"Tercapai");
-
-        viewPager.setAdapter(adapter);
+        btn_capai = viewFrag.findViewById(R.id.complete_goals);
+        btn_capai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragCapai();
+            }
+        });
+        imgAktif = viewFrag.findViewById(R.id.img_aktif);
+        imgCapai = viewFrag.findViewById(R.id.img_capai);
+        txAktif = viewFrag.findViewById(R.id.tx_aktif);
+        txCapai = viewFrag.findViewById(R.id.tx_capai);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),AddImpianActivity.class);
+                startActivity(intent);
+            }
+        });
+        return viewFrag;
     }
+
+    private void fragAktif(){
+        btn_aktif.setCardBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        imgAktif.setImageResource(R.drawable.ic_goals_active_check);
+        txAktif.setTextColor(Color.WHITE);
+
+        FragmentTransaction transaction1 = getChildFragmentManager().beginTransaction();
+        transaction1.replace(R.id.container_impian,new AktifFragment());
+        transaction1.commit();
+    }
+
+    private void fragCapai(){
+        btn_capai.setCardBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        imgCapai.setImageResource(R.drawable.ic_goals_complete_check);
+        txCapai.setTextColor(Color.WHITE);
+
+        FragmentTransaction transaction2 = getChildFragmentManager().beginTransaction();
+        transaction2.replace(R.id.container_impian,new TercapaiFragment());
+        transaction2.commit();
+    }
+
 }
