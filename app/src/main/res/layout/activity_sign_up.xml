@@ -82,17 +82,30 @@
         android:layout_margin="12dp"
         android:layout_below="@id/pwsign"/>
 
-    <com.dx.dxloadingbutton.lib.LoadingButton
-        android:id="@+id/btnsignup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:lb_cornerRadius="12dp"
-        app:lb_btnColor="@color/colorPrimary"
-        app:lb_btnText="@string/sign_in"
-        android:layout_below="@id/cpwsign"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnsignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MarginFormEdittext"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:focusable="true"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@id/cpwsign">
 
-    <androidx.cardview.widget.CardView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/daftar_akun"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
         android:id="@+id/btnsignup_google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

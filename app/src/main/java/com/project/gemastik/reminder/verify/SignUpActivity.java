@@ -2,6 +2,7 @@ package com.project.gemastik.reminder.verify;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.dx.dxloadingbutton.lib.LoadingButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     EditText username, email;
     PasswordView pw, cpw;
-    LoadingButton signin;
+    CardView signin;
 
     FirebaseAuth fAuth;
 
@@ -83,10 +83,8 @@ public class SignUpActivity extends AppCompatActivity {
 
                             Intent intentup = new Intent(SignUpActivity.this, LoginActivity.class);
                             startActivity(intentup);
-                            signin.loadingSuccessful();
                         } else {
                             Toast.makeText(getApplicationContext(),"Password tidak boleh kosong!",Toast.LENGTH_SHORT).show();
-                            signin.loadingFailed();
                         }
 
                     }

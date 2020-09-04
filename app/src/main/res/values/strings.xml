@@ -70,6 +70,7 @@
     <string name="e_book_gratis">E-Book Gratis</string>
     <string name="kebiasaan_impian">Hal yang harus dilakukan sehari-hari</string>
     <string name="tambah">Tambah</string>
+    <string name="daftar_akun">Daftar Akun</string>
 
     <string-array name="kat_artikel">
         <item>Keagamaan</item>

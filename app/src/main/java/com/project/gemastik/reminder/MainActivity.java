@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
@@ -59,4 +60,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent close = new Intent(Intent.ACTION_MAIN);
+        close.addCategory(Intent.CATEGORY_HOME);
+        close.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(close);
+    }
 }
