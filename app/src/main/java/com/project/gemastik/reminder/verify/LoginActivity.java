@@ -19,10 +19,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.project.gemastik.reminder.MainActivity;
 import com.project.gemastik.reminder.R;
+import com.subhrajyoti.passwordview.PasswordView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText email, password;
+    EditText email;
+    PasswordView password;
     FloatingActionButton login;
     TextView signin;
     FirebaseAuth mAuth;
