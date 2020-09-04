@@ -39,6 +39,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_artikel"
         android:layout_width="wrap_content"
+        android:orientation="horizontal"
         android:layout_height="wrap_content"
+        tools:listitem="@layout/artikel_item"
         style="@style/MarginForm"/>
 </LinearLayout>

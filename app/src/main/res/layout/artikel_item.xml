@@ -4,6 +4,7 @@
     android:id="@+id/cv_ebook"
     android:layout_height="wrap_content"
     app:cardCornerRadius="12dp"
+    android:layout_margin="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
