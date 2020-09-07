@@ -72,6 +72,7 @@
     <string name="tambah">Tambah</string>
     <string name="daftar_akun">Daftar Akun</string>
     <string name="video_populer">Video Populer</string>
+    <string name="edit">Edit</string>
 
     <string-array name="kat_artikel">
         <item>Keagamaan</item>

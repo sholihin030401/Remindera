@@ -36,5 +36,18 @@
             android:layout_margin="8dp"
             tools:listitem="@layout/add_habits_item"
             android:layout_below="@id/impian"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:background="@drawable/rectangle_cardview"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:textColor="#ffffff"
+            android:drawableStart="@drawable/ic_edit_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_below="@id/rv_kebiasaan"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

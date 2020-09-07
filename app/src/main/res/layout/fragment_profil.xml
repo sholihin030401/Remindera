@@ -12,12 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_margin="20dp"
+            android:drawableStart="@drawable/ic_exit_to_app_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="end"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_person_black_24dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"/>
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -171,25 +183,5 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:background="#C4C4C4"/>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnlogout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#00CCB0"
-            app:cardCornerRadius="15dp"
-            android:layout_margin="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/logout"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/poppins_semibold"
-                android:layout_gravity="center_horizontal"/>
-
-        </androidx.cardview.widget.CardView>
-
     </LinearLayout>
 </ScrollView>

@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".literasi.VideoDetailActivity">
 
-    <VideoView
+    <WebView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
-        android:layout_height="250dp"/>
+        android:layout_height="180dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_video"
@@ -90,11 +90,34 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_video">
+        android:layout_below="@id/btn_video"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
+            android:id="@+id/title_video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment"/>
+            android:text="@string/hello_blank_fragment"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:id="@+id/desk_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_margin="5dp"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

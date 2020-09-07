@@ -61,6 +61,7 @@ public class ArtikelFragment extends Fragment {
             @Override
             public void run() {
                 shimmerFrameLayout.stopShimmer();
+                shimmerFrameLayout.hideShimmer();
             }
         },3000);
         return view;

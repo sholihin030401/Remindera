@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.project.gemastik.reminder.R;
+import com.project.gemastik.reminder.cnbfragment.ProfilFragment;
 import com.subhrajyoti.passwordview.PasswordView;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -36,6 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
         pw = findViewById(R.id.pwsign);
         cpw = findViewById(R.id.cpwsign);
 
+
         fAuth = FirebaseAuth.getInstance();
 
         signin = findViewById(R.id.btnsignup);
@@ -51,6 +53,12 @@ public class SignUpActivity extends AppCompatActivity {
         String txuser, txmail, txpass, txcpass;
 
         txuser = username.getText().toString();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("username",txuser);
+        ProfilFragment profilFragment = new ProfilFragment();
+        profilFragment.setArguments(bundle);
+
         txmail = email.getText().toString();
         txpass = pw.getText().toString();
         txcpass = cpw.getText().toString();
@@ -79,12 +87,14 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Email tidak boleh kosong!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Berhasil!",Toast.LENGTH_SHORT).show();
+
 
                             Intent intentup = new Intent(SignUpActivity.this, LoginActivity.class);
                             startActivity(intentup);
+
                         } else {
-                            Toast.makeText(getApplicationContext(),"Password tidak boleh kosong!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Gagal membuat akun",Toast.LENGTH_SHORT).show();
                         }
 
                     }

@@ -3,6 +3,7 @@ package com.project.gemastik.reminder.cnbfragment;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -21,7 +22,7 @@ import com.project.gemastik.reminder.verify.LoginActivity;
  */
 public class ProfilFragment extends Fragment {
 
-    CardView btnLogout;
+    TextView btnLogout;
     TextView txEmail, txUsername;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -36,14 +37,17 @@ public class ProfilFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
 
-        btnLogout = view.findViewById(R.id.btnlogout);
+        btnLogout = view.findViewById(R.id.txlogout);
         txEmail = view.findViewById(R.id.mailProfile);
+
+        String users = this.getArguments().getString("username");
+
         txUsername = view.findViewById(R.id.userProfile);
+        txUsername.setText(users);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
         txEmail.setText(mUser.getEmail());
-        txUsername.setText(mUser.getDisplayName());
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,4 +59,5 @@ public class ProfilFragment extends Fragment {
         });
         return view;
     }
+
 }

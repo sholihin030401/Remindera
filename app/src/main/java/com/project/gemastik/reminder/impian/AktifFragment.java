@@ -21,6 +21,7 @@ import java.util.List;
 public class AktifFragment extends Fragment {
 
     List<ImpianItem> items = new ArrayList<>();
+    List<KebiasaanItem> kItems = new ArrayList<>();
     public AktifFragment() {
         // Required empty public constructor
     }
@@ -31,6 +32,8 @@ public class AktifFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_aktif, container, false);
+
+        kItems = (List<KebiasaanItem>) getActivity().getIntent().getExtras().getSerializable("list");
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_impian_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
