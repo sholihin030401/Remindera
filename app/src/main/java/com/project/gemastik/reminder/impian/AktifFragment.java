@@ -40,7 +40,7 @@ public class AktifFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         ImpianAdapter adapter = new ImpianAdapter(items, getActivity());
-        items = (ArrayList<ImpianItem>) getArguments().getSerializable("Data");
+        //items = (ArrayList<ImpianItem>) getArguments().getSerializable("Data");
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);

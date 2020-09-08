@@ -75,6 +75,8 @@
     <string name="edit">Edit</string>
     <string name="quotes1">Jika kamu tidak membangun mimipimu sendiri, maka seseorang akan mempekerjakan kamu untuk membangun mimpi mereka</string>
     <string name="quotes_maker1">Bill Gates</string>
+    <string name="mulai">Mulai</string>
+    <string name="skip">Skip</string>
     <string-array name="kat_artikel">
         <item>Keagamaan</item>
         <item>Motivasi Belajar</item>
