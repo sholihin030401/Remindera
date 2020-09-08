@@ -28,7 +28,6 @@
         android:textColor="#000000"
         android:fontFamily="@font/poppins_medium" />
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_kebiasaan"
             android:layout_width="match_parent"
@@ -36,7 +35,6 @@
             android:layout_margin="8dp"
             tools:listitem="@layout/add_habits_item"
             android:layout_below="@id/impian"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

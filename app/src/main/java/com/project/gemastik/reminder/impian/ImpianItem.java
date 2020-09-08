@@ -1,11 +1,13 @@
 package com.project.gemastik.reminder.impian;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ImpianItem {
+public class ImpianItem implements Serializable {
 
     private String txImpian;
-    private List<KebiasaanItem> itemList;
+    private ArrayList<HabitsItem> itemList;
 
     public String getTxImpian() {
         return txImpian;
@@ -15,15 +17,15 @@ public class ImpianItem {
         this.txImpian = txImpian;
     }
 
-    public List<KebiasaanItem> getItemList() {
+    public ArrayList<HabitsItem> getItemList() {
         return itemList;
     }
 
-    public void setItemList(List<KebiasaanItem> itemList) {
+    public void setItemList(ArrayList<HabitsItem> itemList) {
         this.itemList = itemList;
     }
 
-    public ImpianItem(String txImpian, List<KebiasaanItem> itemList) {
+    public ImpianItem(String txImpian, ArrayList<HabitsItem> itemList) {
         this.txImpian = txImpian;
         this.itemList = itemList;
     }

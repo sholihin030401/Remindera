@@ -2,6 +2,7 @@ package com.project.gemastik.reminder.impian;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,15 +16,15 @@ import android.widget.Toast;
 import com.project.gemastik.reminder.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddImpianActivity extends AppCompatActivity {
 
     LinearLayout layoutList;
     TextView addList;
     CardView btnSimpan;
-    ArrayList<KebiasaanItem> itemList = new ArrayList<>();
-    ArrayList<ImpianItem> list = new ArrayList<>();
 
+    ArrayList<ImpianItem> impianItems = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,41 +44,27 @@ public class AddImpianActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (checkNullData()){
-                    Intent intent = new Intent(AddImpianActivity.this, AktifFragment.class);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    AktifFragment aktifFragment = new AktifFragment();
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("list",itemList);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                    bundle.putSerializable("Data",impianItems);
+                    aktifFragment.setArguments(bundle);
+                    ft.replace(R.id.container_impian,aktifFragment);
+                    ft.commit();
                 }
             }
         });
     }
 
     private boolean checkNullData(){
+        impianItems.clear();
         boolean result = true;
 
-        for (int i = 0; i < layoutList.getChildCount();i++){
-            View layoutView = layoutList.getChildAt(i);
-
-            EditText impian = layoutView.findViewById(R.id.edt_habits);
-
-            KebiasaanItem item = new KebiasaanItem();
-
-            if (!impian.getText().toString().equals("")){
-                item.setTextHabits(impian.getText().toString());
-            } else {
-                result = false;
-                break;
-            }
-
-            itemList.add(item);
-        }
-
-        if (itemList.size() == 0){
+        if (impianItems.size()==0){
             result = false;
-            Toast.makeText(this,"Isi data!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Tambahkan data!",Toast.LENGTH_SHORT).show();
         } else if (!result){
-            Toast.makeText(this,"Isi semua data!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Masukkan Semua Data!",Toast.LENGTH_SHORT).show();
         }
 
         return result;

@@ -5,13 +5,13 @@ import android.os.Parcelable;
 
 public class VideoItem implements Parcelable {
 
-    private String thumbnail;
+    private int thumbnail;
     private String videoUrl;
     private String titleVideo;
     private String descVideo;
     private String katVideo;
 
-    public VideoItem(String thumbnail, String videoUrl, String titleVideo, String descVideo, String katVideo) {
+    public VideoItem(int thumbnail, String videoUrl, String titleVideo, String descVideo, String katVideo) {
         this.thumbnail = thumbnail;
         this.videoUrl = videoUrl;
         this.titleVideo = titleVideo;
@@ -20,7 +20,7 @@ public class VideoItem implements Parcelable {
     }
 
     protected VideoItem(Parcel in) {
-        thumbnail = in.readString();
+        thumbnail = in.readInt();
         videoUrl = in.readString();
         titleVideo = in.readString();
         descVideo = in.readString();
@@ -39,11 +39,11 @@ public class VideoItem implements Parcelable {
         }
     };
 
-    public String getThumbnail() {
+    public int getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(String thumbnail) {
+    public void setThumbnail(int thumbnail) {
         this.thumbnail = thumbnail;
     }
 
@@ -86,7 +86,7 @@ public class VideoItem implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(thumbnail);
+        parcel.writeInt(thumbnail);
         parcel.writeString(videoUrl);
         parcel.writeString(titleVideo);
         parcel.writeString(descVideo);

@@ -65,7 +65,7 @@ public class VideoFragment extends Fragment {
 
     private void dataVideo(){
         videoItemArrayList = new ArrayList<>();
-        videoItemArrayList.add(new VideoItem("url?sa=i&url=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3DID2JlUoykXs&psig=AOvVaw22Ej324Z6J_EzLxljXrqD5&ust=1599531637872000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCs-_f91esCFQAAAAAdAAAAABAD",
+        videoItemArrayList.add(new VideoItem(R.drawable.thumbnail,
                 "https://www.youtube.com/embed/ID2JlUoykXs",
                 "Rahasia Kesuksesan Jack Ma",
                 "Test","Pengembangan Diri"));

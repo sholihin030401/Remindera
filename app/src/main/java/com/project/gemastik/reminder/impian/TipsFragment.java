@@ -14,9 +14,9 @@ import com.project.gemastik.reminder.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DialogAddImpianFragment extends DialogFragment {
+public class TipsFragment extends DialogFragment {
 
-    public DialogAddImpianFragment() {
+    public TipsFragment() {
         // Required empty public constructor
     }
 
@@ -25,6 +25,6 @@ public class DialogAddImpianFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dialog_add_impian, container, false);
+        return inflater.inflate(R.layout.fragment_tips, container, false);
     }
 }

@@ -11,18 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.gemastik.reminder.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ImpianAdapter extends RecyclerView.Adapter<ImpianAdapter.ImpianHolder> {
 
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
-    private List<ImpianItem> itemList;
+    private ArrayList<ImpianItem> itemList;
 
-    public ImpianAdapter(List<ImpianItem> itemList) {
+    public ImpianAdapter(ArrayList<ImpianItem> itemList) {
         this.itemList = itemList;
     }
 
     @NonNull
+
     @Override
     public ImpianAdapter.ImpianHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_impian_item,parent,false);
@@ -37,7 +39,7 @@ public class ImpianAdapter extends RecyclerView.Adapter<ImpianAdapter.ImpianHold
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(holder.rvhabits.getContext(),LinearLayoutManager.VERTICAL,false);
         layoutManager.setInitialPrefetchItemCount(item.getItemList().size());
-        KebiasaanAdapter kebiasaanAdapter = new KebiasaanAdapter(item.getItemList());
+        HabitsAdapter kebiasaanAdapter = new HabitsAdapter(item.getItemList());
         holder.rvhabits.setLayoutManager(layoutManager);
         holder.rvhabits.setAdapter(kebiasaanAdapter);
         holder.rvhabits.setRecycledViewPool(viewPool);

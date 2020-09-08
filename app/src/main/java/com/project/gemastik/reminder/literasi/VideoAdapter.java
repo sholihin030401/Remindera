@@ -46,11 +46,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoHolder>
     public void onBindViewHolder(@NonNull VideoAdapter.VideoHolder holder, int position) {
         VideoItem item = videoItems.get(position);
 
-        String url_thumbnail = "https://www.google.com/"+item.getThumbnail();
         holder.titleVideo.setText(item.getTitleVideo());
         holder.katVideo.setText(item.getKatVideo());
         Glide.with(holder.itemView.getContext())
-                .load(url_thumbnail)
+                .load(item.getThumbnail())
                 .into(holder.thumbnail);
     }
 

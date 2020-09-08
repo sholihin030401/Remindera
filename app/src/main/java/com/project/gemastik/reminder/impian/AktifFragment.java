@@ -20,8 +20,8 @@ import java.util.List;
  */
 public class AktifFragment extends Fragment {
 
-    List<ImpianItem> items = new ArrayList<>();
-    List<KebiasaanItem> kItems = new ArrayList<>();
+    ArrayList<ImpianItem> items = new ArrayList<>();
+
     public AktifFragment() {
         // Required empty public constructor
     }
@@ -33,13 +33,18 @@ public class AktifFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_aktif, container, false);
 
-        kItems = (List<KebiasaanItem>) getActivity().getIntent().getExtras().getSerializable("list");
+        //null object reference
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_impian_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+
+        items = (ArrayList<ImpianItem>) getArguments().getSerializable("Data");
+
         ImpianAdapter adapter = new ImpianAdapter(items);
+        adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
+
         return view;
     }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Reminder</string>
+    <string name="app_name">Bantu.in</string>
     <string name="jadwal">Jadwal</string>
     <string name="impianku">Impianku</string>
     <string name="artikel">Artikel</string>
@@ -73,6 +73,16 @@
     <string name="daftar_akun">Daftar Akun</string>
     <string name="video_populer">Video Populer</string>
     <string name="edit">Edit</string>
+
+    <string-array name="quotes">
+        <item>Jika kamu tidak membangun mimipimu sendiri, maka seseorang akan mempekerjakan kamu untuk membangun mimpi mereka</item>
+        <item>Hello blank fragment</item>
+    </string-array>
+
+    <string-array name="quotes_maker">
+        <item>Bill Gates</item>
+        <item>Anonim</item>
+    </string-array>
 
     <string-array name="kat_artikel">
         <item>Keagamaan</item>

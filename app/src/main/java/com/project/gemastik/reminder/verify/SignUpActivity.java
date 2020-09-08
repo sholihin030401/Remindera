@@ -53,12 +53,6 @@ public class SignUpActivity extends AppCompatActivity {
         String txuser, txmail, txpass, txcpass;
 
         txuser = username.getText().toString();
-
-        Bundle bundle = new Bundle();
-        bundle.putString("username",txuser);
-        ProfilFragment profilFragment = new ProfilFragment();
-        profilFragment.setArguments(bundle);
-
         txmail = email.getText().toString();
         txpass = pw.getText().toString();
         txcpass = cpw.getText().toString();

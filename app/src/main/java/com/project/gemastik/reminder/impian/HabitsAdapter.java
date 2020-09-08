@@ -11,28 +11,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.project.gemastik.reminder.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class KebiasaanAdapter extends RecyclerView.Adapter<KebiasaanAdapter.KebiasaanHolder> {
+public class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.HabitsHolder> {
 
-    List<KebiasaanItem> items;
+    ArrayList<HabitsItem> items;
 
-    public KebiasaanAdapter(List<KebiasaanItem> items) {
+    public HabitsAdapter(ArrayList<HabitsItem> items) {
         this.items = items;
     }
 
     @NonNull
     @Override
-    public KebiasaanAdapter.KebiasaanHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HabitsAdapter.HabitsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_habits_item,parent,false);
 
-        return new KebiasaanHolder(view);
+        return new HabitsHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull KebiasaanAdapter.KebiasaanHolder holder, int position) {
-        KebiasaanItem kebiasaanItem = items.get(position);
-        holder.kebiasaan.setText(kebiasaanItem.getTextHabits());
+    public void onBindViewHolder(@NonNull HabitsAdapter.HabitsHolder holder, int position) {
+        HabitsItem habitsItem = items.get(position);
+        holder.kebiasaan.setText(habitsItem.getTextHabits());
     }
 
     @Override
@@ -40,14 +39,13 @@ public class KebiasaanAdapter extends RecyclerView.Adapter<KebiasaanAdapter.Kebi
         return items.size();
     }
 
-    public class KebiasaanHolder extends RecyclerView.ViewHolder {
-
+    public class HabitsHolder extends RecyclerView.ViewHolder {
         TextView kebiasaan;
-
-        public KebiasaanHolder(@NonNull View itemView) {
+        public HabitsHolder(@NonNull View itemView) {
             super(itemView);
 
             kebiasaan = itemView.findViewById(R.id.habits_item);
+
         }
     }
 }

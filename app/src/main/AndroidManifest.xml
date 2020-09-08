@@ -3,8 +3,8 @@
     package="com.project.gemastik.reminder">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,18 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".literasi.VideoDetailActivity"></activity>
-        <activity android:name=".literasi.ArtikelDetailActivity" />
-        <activity android:name=".impian.AddImpianActivity" />
-        <activity android:name=".jadwal.AddJadwalActivity" />
-        <activity android:name=".verify.SignUpActivity" />
-        <activity android:name=".verify.LoginActivity">
+        <activity android:name=".jadwal.UpdateAgenda"></activity>
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".literasi.VideoDetailActivity" />
+        <activity android:name=".literasi.ArtikelDetailActivity" />
+        <activity android:name=".impian.AddImpianActivity" />
+        <activity android:name=".jadwal.AddJadwalActivity" />
+        <activity android:name=".verify.SignUpActivity" />
+        <activity android:name=".verify.LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

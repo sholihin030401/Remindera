@@ -40,10 +40,7 @@ public class ProfilFragment extends Fragment {
         btnLogout = view.findViewById(R.id.txlogout);
         txEmail = view.findViewById(R.id.mailProfile);
 
-        String users = this.getArguments().getString("username");
-
         txUsername = view.findViewById(R.id.userProfile);
-        txUsername.setText(users);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 

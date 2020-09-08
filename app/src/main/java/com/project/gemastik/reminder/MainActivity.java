@@ -7,16 +7,22 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.project.gemastik.reminder.cnbfragment.MotivasiFragment;
 import com.project.gemastik.reminder.cnbfragment.ImpianFragment;
 import com.project.gemastik.reminder.cnbfragment.JadwalFragment;
 import com.project.gemastik.reminder.cnbfragment.ProfilFragment;
+import com.project.gemastik.reminder.verify.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     ChipNavigationBar chipNavigationBar;
     FragmentManager fragmentManager;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,5 +65,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void checkStatus(){
+
+        FirebaseUser User = firebaseAuth.getCurrentUser();
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        if (User != null){
+
+        }else if(account != null){
+
+        }else{
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            finish();
+        }
+    }
+
+
+    @Override
+    public void onStart() {
+        checkStatus();
+        super.onStart();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent close = new Intent(Intent.ACTION_MAIN);
+        close.addCategory(Intent.CATEGORY_HOME);
+        close.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(close);
+    }
+
 
 }

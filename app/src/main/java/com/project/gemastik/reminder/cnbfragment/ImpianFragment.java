@@ -23,6 +23,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.project.gemastik.reminder.R;
 import com.project.gemastik.reminder.impian.AddImpianActivity;
 import com.project.gemastik.reminder.impian.AktifFragment;
+import com.project.gemastik.reminder.impian.DialogAddTercapaiFragment;
 import com.project.gemastik.reminder.impian.TercapaiFragment;
 
 /**
@@ -30,7 +31,7 @@ import com.project.gemastik.reminder.impian.TercapaiFragment;
  */
 public class ImpianFragment extends Fragment {
 
-    CardView btn_aktif, btn_capai;
+    CardView btn_aktif, btn_capai, btn_goals;
     ImageView imgAktif, imgCapai;
     TextView txAktif, txCapai;
     public ImpianFragment() {
@@ -64,6 +65,16 @@ public class ImpianFragment extends Fragment {
         imgCapai = viewFrag.findViewById(R.id.img_capai);
         txAktif = viewFrag.findViewById(R.id.tx_aktif);
         txCapai = viewFrag.findViewById(R.id.tx_capai);
+
+        btn_goals = viewFrag.findViewById(R.id.ask_goals);
+        btn_goals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogAddTercapaiFragment fragment = new DialogAddTercapaiFragment();
+                fragment.show(getChildFragmentManager(),"FragmentTips");
+            }
+        });
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
