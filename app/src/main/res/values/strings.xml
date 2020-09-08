@@ -29,7 +29,7 @@
     <string name="logout">Logout</string>
     <string name="search">Search</string>
     <string name="motivasi">Motivasi</string>
-    <string name="selamat_datang_users">Selamat Pagi,\nUsers</string>
+    <string name="selamat_datang_users">Selamat Pagi</string>
     <string name="judul">Judul</string>
     <string name="deskripsi">Deskripsi</string>
     <string name="waktu">Waktu</string>
@@ -73,17 +73,8 @@
     <string name="daftar_akun">Daftar Akun</string>
     <string name="video_populer">Video Populer</string>
     <string name="edit">Edit</string>
-
-    <string-array name="quotes">
-        <item>Jika kamu tidak membangun mimipimu sendiri, maka seseorang akan mempekerjakan kamu untuk membangun mimpi mereka</item>
-        <item>Hello blank fragment</item>
-    </string-array>
-
-    <string-array name="quotes_maker">
-        <item>Bill Gates</item>
-        <item>Anonim</item>
-    </string-array>
-
+    <string name="quotes1">Jika kamu tidak membangun mimipimu sendiri, maka seseorang akan mempekerjakan kamu untuk membangun mimpi mereka</string>
+    <string name="quotes_maker1">Bill Gates</string>
     <string-array name="kat_artikel">
         <item>Keagamaan</item>
         <item>Motivasi Belajar</item>

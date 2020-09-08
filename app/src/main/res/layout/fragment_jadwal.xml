@@ -23,6 +23,7 @@
             android:textColor="#000000"
             android:textSize="18sp"
             android:fontFamily="@font/poppins_medium"/>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
