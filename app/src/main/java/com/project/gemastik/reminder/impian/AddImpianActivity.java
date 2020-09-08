@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 import com.project.gemastik.reminder.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AddImpianActivity extends AppCompatActivity {
 
@@ -24,7 +22,7 @@ public class AddImpianActivity extends AppCompatActivity {
     TextView addList;
     CardView btnSimpan;
 
-    ArrayList<ImpianItem> impianItems = new ArrayList<>();
+    ArrayList<HabitsItem> impianItems = new ArrayList<HabitsItem>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +57,25 @@ public class AddImpianActivity extends AppCompatActivity {
     private boolean checkNullData(){
         impianItems.clear();
         boolean result = true;
+
+        for(int i=0;i<layoutList.getChildCount();i++){
+
+            View cricketerView = layoutList.getChildAt(i);
+
+            EditText editTextName = (EditText)cricketerView.findViewById(R.id.edt_habits);
+
+            HabitsItem item = new HabitsItem();
+
+            if(!editTextName.getText().toString().equals("")){
+                item.setTextHabits(editTextName.getText().toString());
+            }else {
+                result = false;
+                break;
+            }
+
+            impianItems.add(item);
+
+        }
 
         if (impianItems.size()==0){
             result = false;

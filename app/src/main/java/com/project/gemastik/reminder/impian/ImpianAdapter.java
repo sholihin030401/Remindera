@@ -1,5 +1,6 @@
 package com.project.gemastik.reminder.impian;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,11 @@ public class ImpianAdapter extends RecyclerView.Adapter<ImpianAdapter.ImpianHold
 
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     private ArrayList<ImpianItem> itemList;
+    private Context context;
 
-    public ImpianAdapter(ArrayList<ImpianItem> itemList) {
+    public ImpianAdapter(ArrayList<ImpianItem> itemList, Context context) {
         this.itemList = itemList;
+        this.context = context;
     }
 
     @NonNull
@@ -39,7 +42,9 @@ public class ImpianAdapter extends RecyclerView.Adapter<ImpianAdapter.ImpianHold
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(holder.rvhabits.getContext(),LinearLayoutManager.VERTICAL,false);
         layoutManager.setInitialPrefetchItemCount(item.getItemList().size());
+
         HabitsAdapter kebiasaanAdapter = new HabitsAdapter(item.getItemList());
+        kebiasaanAdapter.notifyDataSetChanged();
         holder.rvhabits.setLayoutManager(layoutManager);
         holder.rvhabits.setAdapter(kebiasaanAdapter);
         holder.rvhabits.setRecycledViewPool(viewPool);
@@ -61,6 +66,7 @@ public class ImpianAdapter extends RecyclerView.Adapter<ImpianAdapter.ImpianHold
 
             tximpian = itemView.findViewById(R.id.impian);
             rvhabits = itemView.findViewById(R.id.rv_kebiasaan);
+
         }
     }
 }

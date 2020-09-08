@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.project.gemastik.reminder.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +39,8 @@ public class AktifFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.rv_impian_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
+        ImpianAdapter adapter = new ImpianAdapter(items, getActivity());
         items = (ArrayList<ImpianItem>) getArguments().getSerializable("Data");
-
-        ImpianAdapter adapter = new ImpianAdapter(items);
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
