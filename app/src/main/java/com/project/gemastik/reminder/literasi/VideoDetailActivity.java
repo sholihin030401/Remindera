@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -50,6 +51,7 @@ public class VideoDetailActivity extends AppCompatActivity {
                         videoView.getSettings().setJavaScriptEnabled(true);
                         tlVideo.setText(item.getTitleVideo());
                         dsVideo.setText(item.getDescVideo());
+                        bar.setVisibility(View.INVISIBLE);
                     }
                 });
             }

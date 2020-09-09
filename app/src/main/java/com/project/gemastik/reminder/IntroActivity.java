@@ -43,11 +43,12 @@ public class IntroActivity extends AppCompatActivity {
             startActivity(mainActivity);
             finish();
         }
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_intro);
 
         btnNext = findViewById(R.id.btn_next);
+        btnNext.setVisibility(View.VISIBLE);
         btnGetStarted = findViewById(R.id.btn_get_started);
+        btnGetStarted.setVisibility(View.INVISIBLE);
         tabIndicator = findViewById(R.id.tab_indicator);
         btnAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.button_animation);
         tvSkip = findViewById(R.id.tv_skip);

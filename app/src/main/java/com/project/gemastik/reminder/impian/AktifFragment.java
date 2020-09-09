@@ -34,12 +34,12 @@ public class AktifFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_aktif, container, false);
 
-        //null object reference
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_impian_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         ImpianAdapter adapter = new ImpianAdapter(items, getActivity());
+        //null object reference
         //items = (ArrayList<ImpianItem>) getArguments().getSerializable("Data");
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);

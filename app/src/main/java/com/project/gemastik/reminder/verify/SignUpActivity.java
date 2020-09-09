@@ -7,26 +7,32 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.project.gemastik.reminder.MainActivity;
 import com.project.gemastik.reminder.R;
-import com.project.gemastik.reminder.cnbfragment.ProfilFragment;
 import com.subhrajyoti.passwordview.PasswordView;
 
 public class SignUpActivity extends AppCompatActivity {
 
     EditText username, email;
     PasswordView pw, cpw;
-    CardView signin;
+    CardView signin, googleSign;
 
     FirebaseAuth fAuth;
-
+    GoogleSignInClient mGoogleSignInClient;
+    int RC_SIGN_IN = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +53,44 @@ public class SignUpActivity extends AppCompatActivity {
                 registUser();
             }
         });
+
+        googleSign = findViewById(R.id.btnsignup_google);
+        googleSign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.btnsignup_google:
+                        signIn();
+                        break;
+                }
+            }
+        });
+    }
+
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+
+            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } catch (ApiException e) {
+            Log.w("Error", "signInResult:failed code=" + e.getStatusCode());
+        }
     }
 
     private void registUser(){
@@ -81,12 +125,9 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Berhasil!",Toast.LENGTH_SHORT).show();
-
-
                             Intent intentup = new Intent(SignUpActivity.this, LoginActivity.class);
                             startActivity(intentup);
-
+                            Toast.makeText(getApplicationContext(),"Berhasil!",Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getApplicationContext(),"Gagal membuat akun",Toast.LENGTH_SHORT).show();
                         }

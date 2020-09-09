@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.project.gemastik.reminder.verify.LoginActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     ImageView imgLogo;
@@ -28,7 +30,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                    startActivity(new Intent(SplashScreenActivity.this, LoginActivity.class));
                     finish();
                 }
             }
