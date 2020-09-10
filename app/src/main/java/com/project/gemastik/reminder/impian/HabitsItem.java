@@ -2,7 +2,7 @@ package com.project.gemastik.reminder.impian;
 
 import java.io.Serializable;
 
-public class HabitsItem implements Serializable {
+public class HabitsItem {
     private String textHabits;
 
     public HabitsItem() {

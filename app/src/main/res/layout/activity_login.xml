@@ -4,15 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00CCB0"
     tools:context=".verify.LoginActivity">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:background="@drawable/rectangle"
-        android:layout_alignParentBottom="true"/>
+        android:layout_height="400dp"
+        android:background="@drawable/bg_login"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selamat_datang"
+        android:textSize="32sp"
+        android:textColor="#fff"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <EditText
         android:id="@+id/maillogin"
@@ -38,15 +45,7 @@
         android:inputType="textPassword"
         android:fontFamily="@font/poppins_regular"
         android:layout_margin="12dp"
-        android:layout_above="@id/txforgot"/>
-    <TextView
-        android:id="@+id/txforgot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lupa_password"
-        android:layout_above="@id/btnlogin"
-        android:fontFamily="@font/poppins_medium"
-        android:layout_margin="12dp"/>
+        android:layout_above="@id/btnsignin"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
@@ -62,8 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buat_akun_baru"
-        android:layout_below="@id/txforgot"
         android:layout_marginStart="12dp"
+        android:layout_above="@id/btnlogin"
         android:fontFamily="@font/poppins_medium"
         android:textColor="#000000"
         android:textSize="18sp"/>

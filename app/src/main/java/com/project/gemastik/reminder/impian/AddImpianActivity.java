@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.project.gemastik.reminder.R;
+import com.project.gemastik.reminder.cnbfragment.ImpianFragment;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,7 @@ public class AddImpianActivity extends AppCompatActivity {
     CardView btnSimpan;
 
     ArrayList<HabitsItem> impianItems = new ArrayList<HabitsItem>();
+    ImpianItem item = new ImpianItem();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +45,10 @@ public class AddImpianActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (checkNullData()){
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    AktifFragment aktifFragment = new AktifFragment();
+                    ImpianFragment aktifFragment = new ImpianFragment();
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("Data",impianItems);
                     aktifFragment.setArguments(bundle);
-                    ft.replace(R.id.container_impian,aktifFragment);
+                    ft.add(R.id.container_impian,aktifFragment);
                     ft.commit();
                 }
             }

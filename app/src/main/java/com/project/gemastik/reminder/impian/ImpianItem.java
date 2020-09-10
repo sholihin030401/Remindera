@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImpianItem implements Serializable {
+public class ImpianItem {
 
     private String txImpian;
     private ArrayList<HabitsItem> itemList;
@@ -25,7 +25,7 @@ public class ImpianItem implements Serializable {
         this.itemList = itemList;
     }
 
-    public ImpianItem(String txImpian, ArrayList<HabitsItem> itemList) {
+    public ImpianItem() {
         this.txImpian = txImpian;
         this.itemList = itemList;
     }

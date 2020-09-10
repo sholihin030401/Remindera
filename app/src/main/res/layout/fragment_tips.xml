@@ -2,16 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".impian.TipsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,6 +38,13 @@
                 app:lottie_autoPlay="true"
                 android:layout_gravity="center_horizontal"/>
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,6 +53,9 @@
                 android:layout_margin="10dp"
                 android:textColor="#000000"
                 android:fontFamily="@font/poppins_medium"/>
+
+                </RelativeLayout>
+            </ScrollView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
