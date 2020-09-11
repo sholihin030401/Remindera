@@ -2,24 +2,26 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="10dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="5dp">
+    android:orientation="horizontal"
+    android:layout_marginBottom="-10dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#fff"
+    app:contentPadding="5dp"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:id="@+id/linearImpian"
+        android:id="@+id/linearDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/impian"
+            android:id="@+id/detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/judul"
@@ -27,13 +29,7 @@
             android:textStyle="bold"
             android:textSize="16sp"/>
 
-        <TextView
-            android:id="@+id/waktuImpian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/waktu"
-            android:textColor="#5A5A5A"
-            android:textSize="12sp"/>
-
     </LinearLayout>
+
+
 </androidx.cardview.widget.CardView>
