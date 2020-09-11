@@ -7,7 +7,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="impian">Impian</string>
+
     <string name="buat_akun_baru">Buat Akun Baru</string>
     <string name="login">Login</string>
     <string name="lupa_password">Lupa Password</string>
@@ -29,7 +29,7 @@
     <string name="logout">Logout</string>
     <string name="search">Search</string>
     <string name="motivasi">Motivasi</string>
-    <string name="selamat_datang_users">Selamat Pagi</string>
+    <string name="selamat_datang_users">Selamat Siang</string>
     <string name="judul">Judul</string>
     <string name="deskripsi">Deskripsi</string>
     <string name="waktu">Waktu</string>
@@ -79,6 +79,20 @@
     <string name="skip">Skip</string>
     <string name="selamat_datang">Selamat\nDatang</string>
     <string name="waktu_pencapaian">Waktu Pencapaian</string>
+    <string name="desk_ebook1">Buku ini ditujukan untuk pelajar, guru atau pendidik, orang tua, pembimbing dan siapa pun yang peduli pada nasib lulusan SMA. Panduan ini membekali lulusan SMA dan sederajat dengan kecakapan hidup serta kesadaran karir.</string>
+    <string name="desk_ebook2">Kisah motifasi dengan dahsyat nya kekuatan berpikir positif beserta 47 kisah inspiratif akan memngasilkan 2 kunci pemuas hidup dan merupakan kumpulan 4 Ebook best seller 2017.</string>
+    <string name="desk_ebook3">Buku ini memberikan gambaran tentang bentuk interaksi yang bisa digunakan dalam kegiatan belajar-mengajar. Dengan interaksi tersebut, diharapkan bisa meningkatkan motivasi siswa untuk menunjukkan minat, inisiatif dan aktif dalam kegiatan belajar. Sehingga akan terbentuk komunikasi timbal-balik antara guru dan siswa. Dengan demikian, akan diperoleh hasil yang lebih baik bagi siswa yaitu tidak sekadar ilmu pengetahuan tapi juga nilai-nilai yang bisa membentuk perkembangan pribadi siswa seutuhnya.</string>
+    <string name="desk_video1">Wawancara Mark Zuckerberg, Pendiri dan CEO Facebook oleh Y Combinator mengenai perjalanannya mendirikan Facebook ketika memulai sebagai Startup.
+Dalam wawancara nya, Mark Zuckerberg memberikan motivasi dan inspirasi kepada kaum muda untuk tidak takut dalam memulai sebuah startup. Dimana Mark Zuckerberg juga memulai membuat Facebook ketika berusia 19 tahun. Dengan perkembangan raksasa sosial media Facebook seperti saat ini, Mark Zuckerberg mengatakan bahwa Tidak ada yang Mustahil!.
+Kami mencoba merangkum bagian-bagian yang dapat memberi pelajaran, motivasi dan inpirasi./nChannel : Daily Sukses</string>
+    <string name="desk_video2">Jack Ma adalah seorang pebisnis berkebangsaan Tionghoa. Dia merupakan pendiri sekaligus Chairman Eksekutif dari Alibaba Group, perusahaan e-commerce terbesar di Tiongkok. Dia merupakan warga China Daratan pertama yang pernah muncul di majalah Forbes dan terdaftar sebagai biliuner dunia.
+Dalam video ini Jack Ma bercerita awal mula berdirinya Alibaba, dan memberikan nasihat, motivasi dan tips untuk bisa sukses dari pengalamannya.</string>
+    <string name="desk_goals">Tentukan impian</string>
+    <string name="persiapan">Persiapan</string>
+    <string name="literasi">Literasi</string>
+    <string name="impian">Impian</string>
+    <string name="goalss">Supaya mimpimu berhasil, apa saja yang harus dipersiapkan?</string>
+
     <string-array name="kat_artikel">
         <item>Keagamaan</item>
         <item>Motivasi Belajar</item>

@@ -30,6 +30,13 @@
         <activity android:name=".verify.SignUpActivity" />
         <activity android:name=".verify.LoginActivity" />
         <activity android:name=".MainActivity" />
+        <service android:name=".CloudNotifFcm">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+            <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/icon_app"/>
+        </service>
     </application>
 
 </manifest>

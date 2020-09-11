@@ -111,17 +111,14 @@ public class AddImpianActivity extends AppCompatActivity {
         dateTimeDialogFragment = (SwitchDateTimeDialogFragment) getSupportFragmentManager().findFragmentByTag(TAG_DATETIME);
         if (dateTimeDialogFragment == null){
             dateTimeDialogFragment = SwitchDateTimeDialogFragment.newInstance(
-                    getString(R.string.mulai_agenda),
+                    getString(R.string.target_pencapaian),
                     getString(android.R.string.ok),
                     getString(android.R.string.cancel)
             );
         }
 
-        dateTimeDialogFragment.setTimeZone(TimeZone.getDefault());
-
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("d MMM yyyy HH:mm", java.util.Locale.getDefault());
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("MMM yyyy", java.util.Locale.getDefault());
         dateTimeDialogFragment.setHighlightAMPMSelection(false);
-        dateTimeDialogFragment.set24HoursMode(true);
         dateTimeDialogFragment.setMinimumDateTime(new GregorianCalendar(2016, Calendar.JANUARY,1).getTime());
         dateTimeDialogFragment.setMaximumDateTime(new GregorianCalendar(2045, Calendar.DECEMBER,31).getTime());
 

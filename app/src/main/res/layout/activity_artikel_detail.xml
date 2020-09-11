@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".literasi.ArtikelDetailActivity">
 
 
@@ -178,17 +178,18 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/btn_ebook">
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_desk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="18dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="7dp">
+        app:cardElevation="7dp"
+        android:layout_below="@id/btn_ebook">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -213,6 +214,8 @@
             android:textSize="15sp"
             android:fontFamily="@font/poppins_regular"/>
         </LinearLayout>
+        </ScrollView>
     </androidx.cardview.widget.CardView>
-    </ScrollView>
+
+
 </RelativeLayout>

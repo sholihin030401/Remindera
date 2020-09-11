@@ -47,6 +47,8 @@ public class JadwalFragment extends Fragment implements DatePickerListener {
 
     String personEmail;
     FirebaseUser mUser;
+    FirebaseAuth mAuth;
+    GoogleSignInClient mGoogleSignInClient;
     private DatabaseReference reference;
     private RecyclerView mRecycler;
     private LinearLayoutManager mManager;
@@ -64,8 +66,8 @@ public class JadwalFragment extends Fragment implements DatePickerListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_jadwal, container, false);
 
-//        mAuth = FirebaseAuth.getInstance();
-//        mUser = mAuth.getCurrentUser();
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
 
         FloatingActionButton fab = view.findViewById(R.id.fabAddJadwal);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -91,18 +93,18 @@ public class JadwalFragment extends Fragment implements DatePickerListener {
         picker.setBackgroundColor(Color.WHITE);
         picker.setDate(new DateTime());
 
-//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestEmail()
-//                .build();
-//
-//        mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
         if (acct != null) {
             personEmail = acct.getEmail();
 
         }else {
-            //personEmail = mUser.getEmail();
+            personEmail = mUser.getEmail();
         }
 
         mRecycler = view.findViewById(R.id.rv_agenda);

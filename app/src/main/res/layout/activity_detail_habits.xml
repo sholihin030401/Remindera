@@ -18,7 +18,7 @@
             android:id="@+id/idku"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/kebiasaan_impian"
+            android:text="@string/goalss"
             android:textSize="16sp"
             android:layout_margin="10dp"
             android:textColor="#000000"
@@ -29,6 +29,7 @@
         android:id="@+id/jadwal_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/ask_goals">
         <ScrollView
             android:layout_width="match_parent"

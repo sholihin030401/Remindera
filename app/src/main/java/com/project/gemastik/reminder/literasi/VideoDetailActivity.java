@@ -37,7 +37,7 @@ public class VideoDetailActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(7000);
                 } catch (Exception e){ }
 
                 handler.post(new Runnable() {

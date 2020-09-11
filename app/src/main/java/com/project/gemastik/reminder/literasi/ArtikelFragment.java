@@ -69,8 +69,9 @@ public class ArtikelFragment extends Fragment {
 
     private void dataArtikel(){
         itemList = new ArrayList<>();
-        itemList.add(new ArtikelItem(R.drawable.ali,"Ali (Udin)","Aliudin","Pengembangan Diri","22 Halaman","Hnaya Test"));
-        itemList.add(new ArtikelItem(R.drawable.ali,"Ali (Udin)","Aliudin","Pengembangan Diri","22 Halaman","Hnaya Test"));
-        itemList.add(new ArtikelItem(R.drawable.ali,"Ali (Udin)","Aliudin","Pengembangan Diri","22 Halaman","Hnaya Test"));
+        itemList.add(new ArtikelItem(R.drawable.kamu,"Kamu Pasti Bisa Sukses","Judy Langelier","Pengembangan Diri","22 Halaman",getString(R.string.desk_ebook1)));
+        itemList.add(new ArtikelItem(R.drawable.inspiratif,"47 Kisah Inspiratif","Teguh Awee","Pengembangan Diri","68 Halaman",getString(R.string.desk_ebook2)));
+        itemList.add(new ArtikelItem(R.drawable.belajar,"Interaksi dan Motivasi Belajar Mengajar","Sardiman A.M","Motivasi Belajar","30 Halaman",getString(R.string.desk_ebook3)));
     }
 }
+

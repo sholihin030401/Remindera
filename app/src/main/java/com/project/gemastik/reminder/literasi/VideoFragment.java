@@ -65,9 +65,13 @@ public class VideoFragment extends Fragment {
 
     private void dataVideo(){
         videoItemArrayList = new ArrayList<>();
-        videoItemArrayList.add(new VideoItem(R.drawable.thumbnail,
+        videoItemArrayList.add(new VideoItem(R.drawable.jackma,
                 "https://www.youtube.com/embed/ID2JlUoykXs",
                 "Rahasia Kesuksesan Jack Ma",
-                "Test","Pengembangan Diri"));
+                getString(R.string.desk_video2),"Pengembangan Diri"));
+        videoItemArrayList.add(new VideoItem(R.drawable.mark,
+                "https://www.youtube.com/embed/ba1d7pG1iR4",
+                "Mark Zuckerberg",
+                getString(R.string.desk_video1),"Motivasi Belajar"));
     }
 }

@@ -44,7 +44,7 @@ public class ImpianFragment extends Fragment {
     FirebaseUser mUser;
     private DatabaseReference reference;
     CardView btn_goals;
-
+    FirebaseAuth mAuth;
 
     List<dataImpian> list;
     adapterImpian adapter;
@@ -76,6 +76,8 @@ public class ImpianFragment extends Fragment {
         manager.setReverseLayout(true);
         manager.setStackFromEnd(true);
         rv_impian.setLayoutManager(manager);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
         if (acct != null) {

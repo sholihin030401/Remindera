@@ -16,7 +16,7 @@
         android:id="@+id/edt_habits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/nama_impian"
+        android:hint="@string/persiapan"
         android:inputType="text"
         android:padding="8dp"
         android:cursorVisible="true"

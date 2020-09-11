@@ -45,7 +45,7 @@ public class adapterDetailImpian extends RecyclerView.Adapter<adapterDetailImpia
 
     @Override
     public int getItemCount() {
-        return 0;
+        return histori.size();
     }
 
 
